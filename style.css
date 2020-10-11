@@ -1,0 +1,114 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #1e3289;
+    
+}
+
+header h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+p {
+    font-size: 20px;
+}
+
+body h2 {
+    color: #1e3289;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#newsHeader {
+    color: #DB1065;
+    font-size:50px;
+}
+
+#news {
+    align-items: center;
+    
+}
+.twitter-timeline {
+    margin-right: 25%;
+    margin-left: 25%;
+    height: 4px;
+    align-self: center;
+}
+
+#tweets {
+    height:5;
+}
+
+body {
+    background-color: #ffffff;
+    text-align: center;
+    color: 1e3289;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 270px;
+    padding-left: 30px;
+}
+
+.contact h2{
+    float: left;
+    margin-left: 80px;
+    font-weight: normal;
+    font-size: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#contactForm {
+    float:right;
+    padding: 70px;
+    margin-right: 70px;
+}
+#emailInput {
+    width: 500px;
+    height: 40px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    border-color: #1e3289;
+    border-width: 5px;
+}
+::placeholder {
+    font-size: 20px;
+    padding:20px;
+  }
+#signUpBtn {
+    background-color: #1e3289;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.logos {
+    width:5px;
+    height:5px;
+}
+
+#logo {
+    margin-left: 78px;
+    color: white;
+    width: 200px;
+}
