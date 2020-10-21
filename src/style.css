@@ -53,12 +53,14 @@ body h2 {
 .columnL {
     margin-left:100px;
     float: left;
-    width: 45%;
+    width: 40%;
     padding: 15px;
 }
 
 .columnR {
     margin-right:100px;
+    width: 40%;
+    float: right;
     padding: 15px;
 }
 
@@ -71,10 +73,17 @@ body h2 {
 .city {
     text-align:left;
     line-height: 50%;
+    padding-top: 20px;
 }
 
 .statsHeader {
     font-weight: 550;
+}
+
+.chartCanvas {
+    flex: auto;
+    width: 70%;
+    padding: 15px;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
