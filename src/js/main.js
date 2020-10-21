@@ -53,7 +53,7 @@ function organizeData(){
     covidDataset.forEach(function(data){
         let date = new Date(data['date']); 
         if (date.getMonth() < 8){
-            return; // skip this data entry if before May
+            return; // skip this data entry if before September
         }
 
         if (data['state'] !== 'Texas'){
@@ -67,9 +67,6 @@ function organizeData(){
         if (county in previousMap){
             previous = parseInt(previousMap[county]);
         }
-        if (firstVal){
-            
-        }
         let city = countyToCity[county];
         if (data['date'] in dataPoints[city]){
             dataPoints[city][data['date']] += Math.max(0,(parseInt(data['cases'])-previous));
@@ -79,15 +76,21 @@ function organizeData(){
 
         previousMap[county] = data['cases'];
     });
-
+    // set first value of every city's data points to 0
+    dataPoints['Austin']['2020-09-02'] = 0;
+    dataPoints['Houston']['2020-09-02'] = 0;
+    dataPoints['Dallas']['2020-09-02'] = 0;
+    dataPoints['San Antonio']['2020-09-02'] = 0;
     
 }
 
 //graphData : graph the data onto the web page using the chart.js library!
 function graphData(){
-    console.log(dataPoints);
+    // console.log(dataPoints);
     let y1 = Object.values(dataPoints['Austin']);
+    //y1.shift();
     let x1 = Object.keys(dataPoints['Austin']);
+    //x1.shift();
     const ctx = document.getElementById('austinChart');
     let myChart = new Chart(ctx, {
         type: 'line',
@@ -96,8 +99,8 @@ function graphData(){
             datasets: [{ 
                 data: y1,
                 label: ["New Cases"],
-                borderColor: "#0066ff",
-                fill: false
+                borderColor: "#4285EA",
+                fill: false,
               }]
           },
           options: {
@@ -114,7 +117,7 @@ function graphData(){
             datasets: [{ 
                 data: y2,
                 label: ["New Cases"],
-                borderColor: "#0066ff",
+                borderColor: "#4285EA",
                 fill: false
               }]
           },
@@ -133,7 +136,7 @@ function graphData(){
             datasets: [{ 
                 data: y3,
                 label: ["New Cases"],
-                borderColor: "#0066ff",
+                borderColor: "#4285EA",
                 fill: false
               }]
           },
@@ -152,7 +155,7 @@ function graphData(){
             datasets: [{ 
                 data: y4,
                 label: ["New Cases"],
-                borderColor: "#0066ff",
+                borderColor: "#4285EA",
                 fill: false
               }]
           },
