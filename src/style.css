@@ -29,8 +29,16 @@ header p {
     font-size: 20px;
 }
 
-body p {
-    font-size: 20px;
+@media screen and (min-width: 601px) {
+    body p {
+        font-size: 20px;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    body p {
+        font-size: 8px;
+    }
 }
 
 body h2 {
@@ -115,7 +123,6 @@ hr.solid {
 #tweets {
     height: 5;
 }
-
 body {
     background-color: #ffffff;
     text-align: center;
