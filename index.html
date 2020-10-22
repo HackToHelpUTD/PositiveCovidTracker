@@ -1,153 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./src/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
 
-    <title>COVID-19 Tracker (Texas Edition)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A detailed tracker with charts showing COVID-19 statistics in the 4 major cities of Texas: Austin, Dallas, Houston, San Antonio, along with some good news to spread positivity during uncertain times."
-    />
-    <!--Import libraries to handle csv files. https://github.com/d3/d3-fetch/blob/master/README.md#csv -->
-    <script src="https://d3js.org/d3-dsv.v2.min.js"></script>
-    <script src="https://d3js.org/d3-fetch.v2.min.js"></script>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-  </head>
+  <title>COVID-19 Tracker (Texas Edition)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="A detailed tracker with charts showing COVID-19 statistics in the 4 major cities of Texas: Austin, Dallas, Houston, San Antonio, along with some good news to spread positivity during uncertain times." />
+  <!--Import libraries to handle csv files. https://github.com/d3/d3-fetch/blob/master/README.md#csv -->
+  <script src="https://d3js.org/d3-dsv.v2.min.js"></script>
+  <script src="https://d3js.org/d3-fetch.v2.min.js"></script>
 
-  <body>
-    <header>
-      <img src="./src/img/flag.png" alt="Texas Flag" />
-      <br />
-      <br />
-      <h1>COVID-19 Tracker</h1>
-      <h3>Texas Edition</h3>
-      <p>
-        A detailed tracker with charts showing COVID-19 statistics in the 4
-        major cities of Texas: Austin, Dallas,Houston, San Antonio <br /><br />
-        Scroll down below to find some good news and spread positivity during
-        uncertain times.
-      </p>
-    </header>
-    <div class="container">
-      <br />
-      <div class="row">
-        <div class="col-sm">
-          <div class="city">
-            <h2 id="Austin">Austin</h2>
-            <div class="chartCanvas">
-              <canvas id="austinChart"></canvas>
-            </div>
-            <p class="statsHeader">Quick Stats</p>
-            <p>The Good: Decreasing trend in deaths caused by COVID</p>
-            <p>The Bad: Still no vaccine available to pulic</p>
-            <p>
-              The Ugly: Number of new cases still fluctuating at high levels
-            </p>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="./src/img/flag.png" alt="Texas Flag" />
+    <br />
+    <br />
+    <h1>COVID-19 Tracker</h1>
+    <h3>Texas Edition</h3>
+    <p>
+      A detailed tracker with charts showing COVID-19 statistics in the 4
+      major cities of Texas: Austin, Dallas,Houston, San Antonio <br /><br />
+      Scroll down below to find some good news and spread positivity during
+      uncertain times.
+    </p>
+  </header>
+  <div class="container">
+    <br />
+    <div class="row">
+      <div class="col-sm">
+        <div class="city">
+          <h2 id="Austin">Austin</h2>
+          <div class="chartCanvas">
+            <canvas id="austinChart"></canvas>
           </div>
-          <div class="city">
-            <h2 id="Houston">Houston</h2>
-            <div class="chartCanvas">
-              <canvas id="houstonChart"></canvas>
-            </div>
-            <p class="statsHeader">Quick Stats</p>
-            <p>The Good: Decreasing trend in deaths caused by COVID</p>
-            <p>The Bad: Still no vaccine available to pulic</p>
-            <p>
-              The Ugly: Number of new cases still fluctuating at high levels
-            </p>
-          </div>
+          <p class="statsHeader">Quick Stats</p>
+          <p>The Good: Decreasing trend in deaths caused by COVID</p>
+          <p>The Bad: Still no vaccine available to pulic</p>
+          <p>
+            The Ugly: Number of new cases still fluctuating at high levels
+          </p>
         </div>
-        <div class="col-sm">
-          <div class="city">
-            <h2 id="Dallas">Dallas</h2>
-            <div class="chartCanvas">
-              <canvas id="dallasChart"></canvas>
-            </div>
-            <p class="statsHeader">Quick Stats</p>
-            <p>The Good: Decreasing trend in deaths caused by COVID</p>
-            <p>The Bad: Still no vaccine available to pulic</p>
-            <p>
-              The Ugly: Number of new cases still fluctuating at high levels
-            </p>
+        <div class="city">
+          <h2 id="Houston">Houston</h2>
+          <div class="chartCanvas">
+            <canvas id="houstonChart"></canvas>
           </div>
-          <div class="city">
-            <h2 id="SanAntonio">San Antonio</h2>
-            <div class="chartCanvas">
-              <canvas id="antonioChart"></canvas>
-            </div>
-            <p class="statsHeader">Quick Stats</p>
-            <p>The Good: Decreasing trend in deaths caused by COVID</p>
-            <p>The Bad: Still no vaccine available to pulic</p>
-            <p>
-              The Ugly: Number of new cases still fluctuating at high levels
-            </p>
+          <p class="statsHeader">Quick Stats</p>
+          <p>The Good: Decreasing trend in deaths caused by COVID</p>
+          <p>The Bad: Still no vaccine available to pulic</p>
+          <p>
+            The Ugly: Number of new cases still fluctuating at high levels
+          </p>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="city">
+          <h2 id="Dallas">Dallas</h2>
+          <div class="chartCanvas">
+            <canvas id="dallasChart"></canvas>
           </div>
+          <p class="statsHeader">Quick Stats</p>
+          <p>The Good: Decreasing trend in deaths caused by COVID</p>
+          <p>The Bad: Still no vaccine available to pulic</p>
+          <p>
+            The Ugly: Number of new cases still fluctuating at high levels
+          </p>
+        </div>
+        <div class="city">
+          <h2 id="SanAntonio">San Antonio</h2>
+          <div class="chartCanvas">
+            <canvas id="antonioChart"></canvas>
+          </div>
+          <p class="statsHeader">Quick Stats</p>
+          <p>The Good: Decreasing trend in deaths caused by COVID</p>
+          <p>The Bad: Still no vaccine available to pulic</p>
+          <p>
+            The Ugly: Number of new cases still fluctuating at high levels
+          </p>
         </div>
       </div>
     </div>
-    <hr class="solid" />
+  </div>
+  <hr class="solid" />
+  <div class="container">
     <div id="news">
       <h1 id="newsHeader">The Good News</h1>
       <div id="tweets">
-        <a
-          class="twitter-timeline"
-          data-theme="light"
-          data-height="1000px"
-          href="https://twitter.com/Coronavirusgoo1?ref_src=twsrc%5Etfw"
-          >Happy Tweets</a
-        >
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script>
+        <a class="twitter-timeline" data-theme="light" data-height="1000px"
+          href="https://twitter.com/Coronavirusgoo1?ref_src=twsrc%5Etfw">Happy Tweets</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
     </div>
-    <footer>
-      <div class="contact">
-        <h2>Contact us</h2>
-        <div class="logos">
-          <img
-            src="./src/img/PinClipart.com_twitter-clip-art_3874021.png"
-            alt="logos"
-            id="logo"
-          />
-        </div>
-        <form action="index.html" id="contactForm">
-          <input
-            type="email"
-            name="email"
-            id="emailInput"
-            placeholder="email@address.com"
-          />
-          <br />
-        </form>
+  </div>
+  <footer>
+    <div class="contact">
+      <h2>Contact us</h2>
+      <div class="logos">
+        <img src="./src/img/PinClipart.com_twitter-clip-art_3874021.png" alt="logos" id="logo" />
       </div>
-    </footer>
-    <!-- Import our script to gather data and graph it!-->
-    <script src="./src/js/main.js"></script>
-    <!-- Import bootstrap javascript-->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <form action="index.html" id="contactForm">
+        <input type="email" name="email" id="emailInput" placeholder="email@address.com" />
+        <br />
+      </form>
+    </div>
+  </footer>
+  <!-- Import our script to gather data and graph it!-->
+  <script src="./src/js/main.js"></script>
+  <!-- Import bootstrap javascript-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

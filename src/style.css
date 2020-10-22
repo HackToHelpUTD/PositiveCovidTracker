@@ -36,10 +36,11 @@ body h2 {
 #newsHeader {
   color: #db1065;
   font-size: 50px;
+  text-align: center;
 }
 
 #news {
-  align-items: center;
+  /* align-items: center; */
 }
 /* Tracker charts */
 
@@ -120,13 +121,13 @@ hr.solid {
 }
 
 /* Good news section */
-
+/* 
 .twitter-timeline {
   margin-right: 25%;
   margin-left: 25%;
   height: 4px;
   align-self: center;
-}
+} */
 
 #tweets {
   height: 5;
