@@ -103,29 +103,6 @@ body h2 {
     }
 }
 
-
-/* 
-#Austin {
-    position: sticky;
-    float: left;
-    padding: 10px;
-}
-
-#Dallas {
-    float: right;
-    padding: 10px;
-}
-
-#Houston {
-    float: left;
-    padding: 200px;
-}
-
-#SanAntonio {
-    float: right;
-    padding: 200px;
-} */
-
 hr.solid {
     border-top: 20px solid #1e3289;
     margin-left: 100px;
@@ -134,15 +111,6 @@ hr.solid {
 
 
 /* Good news section */
-
-
-/* 
-.twitter-timeline {
-  margin-right: 25%;
-  margin-left: 25%;
-  height: 4px;
-  align-self: center;
-} */
 
 #tweets {
     height: 5;
