@@ -49,7 +49,6 @@ async function fetchData(){
 function organizeData(){
     //Loop through each data entry we received from the data set and filter out the entries we don't care about.
     let previousMap = {};
-    let firstVal = true;
     covidDataset.forEach(function(data){
         let date = new Date(data['date']); 
         if (date.getMonth() < 8){
@@ -81,12 +80,11 @@ function organizeData(){
     dataPoints['Houston']['2020-09-02'] = 0;
     dataPoints['Dallas']['2020-09-02'] = 0;
     dataPoints['San Antonio']['2020-09-02'] = 0;
-    
+    covidDataset = null; 
 }
 
 //graphData : graph the data onto the web page using the chart.js library!
 function graphData(){
-    // console.log(dataPoints);
     let y1 = Object.values(dataPoints['Austin']);
     //y1.shift();
     let x1 = Object.keys(dataPoints['Austin']);
@@ -165,10 +163,10 @@ function graphData(){
     
 }
 
-async function a(){
+async function run(){
     await fetchData();//Go gather the covid data.
     organizeData();//organize it so we are ready to graph it.
     graphData();//graph the data on the site!
 }
 
-a();
+window.onload = run();

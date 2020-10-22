@@ -1,97 +1,95 @@
 html {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 header {
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 30px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    background-color: #1e3289;
-    
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: #1e3289;
 }
 
 header h1 {
-    font-size: 60px;
-    margin: 0;
+  font-size: 60px;
+  margin: 0;
 }
 
 header h3 {
-    margin: 0;
-    font-size: 40px;
-    font-weight: lighter;
+  margin: 0;
+  font-size: 40px;
+  font-weight: lighter;
 }
 
 p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 body h2 {
-    color: #1e3289;
-    font-size: 30px;
-    font-weight: bold;
+  color: #1e3289;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 #newsHeader {
-    color: #DB1065;
-    font-size:50px;
+  color: #db1065;
+  font-size: 50px;
 }
 
 #news {
-    align-items: center;
-    
+  align-items: center;
 }
 /* Tracker charts */
 
 #tracker {
-    background-color: rgba(240, 240, 240, 0.925);
-    padding: 500px;
+  background-color: rgba(240, 240, 240, 0.925);
+  padding: 500px;
 }
 
 .columnL {
-    margin-left:100px;
-    float: left;
-    width: 40%;
-    padding: 15px;
+  margin-left: 100px;
+  float: left;
+  width: 40%;
+  padding: 15px;
 }
 
 .columnR {
-    margin-right:100px;
-    width: 40%;
-    float: right;
-    padding: 15px;
+  margin-right: 100px;
+  width: 40%;
+  float: right;
+  padding: 15px;
 }
 
-.row:after {
+/*.row:after {
     content: "";
     display: table;
     clear: both;
-}
+}*/
 
 .city {
-    text-align:left;
-    line-height: 50%;
-    padding-top: 20px;
+  text-align: left;
+  line-height: 50%;
+  padding-top: 20px;
 }
 
 .statsHeader {
-    font-weight: 550;
+  font-weight: 550;
 }
 
 .chartCanvas {
-    flex: auto;
-    width: 70%;
-    padding: 15px;
+  flex: auto;
+  width: 100%;
+  padding: 15px;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-    .column {
-      width: 100%;
-    }
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
   }
+}
 
 /* 
 #Austin {
@@ -116,82 +114,82 @@ body h2 {
 } */
 
 hr.solid {
-    border-top: 20px solid #1e3289;
-    margin-left:100px;
-    margin-right:100px;
+  border-top: 20px solid #1e3289;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 /* Good news section */
 
 .twitter-timeline {
-    margin-right: 25%;
-    margin-left: 25%;
-    height: 4px;
-    align-self: center;
+  margin-right: 25%;
+  margin-left: 25%;
+  height: 4px;
+  align-self: center;
 }
 
 #tweets {
-    height:5;
+  height: 5;
 }
 
 body {
-    background-color: #ffffff;
-    text-align: center;
-    color: 1e3289;
+  background-color: #ffffff;
+  text-align: center;
+  color: 1e3289;
 }
 
 footer {
-    background-color: black;
-    color: white;
-    padding-top: 20px;
-    padding-right: 30px;
-    padding-bottom: 270px;
-    padding-left: 30px;
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 270px;
+  padding-left: 30px;
 }
 
-.contact h2{
-    float: left;
-    margin-left: 80px;
-    font-weight: normal;
-    font-size: 40px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+.contact h2 {
+  float: left;
+  margin-left: 80px;
+  font-weight: normal;
+  font-size: 40px;
+  color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 #contactForm {
-    float:right;
-    padding: 70px;
-    margin-right: 70px;
+  float: right;
+  padding: 70px;
+  margin-right: 70px;
 }
 #emailInput {
-    width: 500px;
-    height: 40px;
-    border-radius: 40px;
-    margin-bottom: 20px;
-    border-color: #1e3289;
-    border-width: 5px;
+  width: 500px;
+  height: 40px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  border-color: #1e3289;
+  border-width: 5px;
 }
 ::placeholder {
-    font-size: 20px;
-    padding:20px;
-  }
+  font-size: 20px;
+  padding: 20px;
+}
 #signUpBtn {
-    background-color: #1e3289;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
+  background-color: #1e3289;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 #signUpBtn:hover {
-    background-color: #2fbdf5;
+  background-color: #2fbdf5;
 }
 
 .logos {
-    width:5px;
-    height:5px;
+  width: 5px;
+  height: 5px;
 }
 
 #logo {
-    margin-left: 78px;
-    color: white;
-    width: 200px;
+  margin-left: 78px;
+  color: white;
+  width: 200px;
 }
