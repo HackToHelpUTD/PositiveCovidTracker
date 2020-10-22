@@ -37,7 +37,7 @@ header p {
 
 @media screen and (max-width: 600px) {
     body p {
-        font-size: 8px;
+        font-size: 12px;
     }
 }
 
@@ -142,23 +142,17 @@ footer {
      text-align: center;
     }
     
-    .contact {
-        grid-row: 1 / 2;
-    }
-    
-    .contact h2 {
-        float: left;
-        font-weight: normal;
-        font-size: 40px;
+.contact {
+    grid-row: 1 / 2;
+}
+
+.contact h2 {
+    float: left;
+    font-weight: normal;
+    font-size: 40px;
     color: white;
     font-family: "Roboto", sans-serif;
-    
 }
-/* 
-.contactForm {
-    display: contents;
-    justify-content: center;
-} */
 
 #contactForm {
     float: right; 
